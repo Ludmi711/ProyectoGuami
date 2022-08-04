@@ -1,1 +1,8 @@
 @import "utilities/nosotros";
+@import "utilities/variables";
+
+@media (max-width: 576px) and (min-width: 280px) {
+    header {
+        background-color: red;
+    }
+}

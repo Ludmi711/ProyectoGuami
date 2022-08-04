@@ -1,7 +1,4 @@
-//variables
-$colorPrincipal: #FAF8FF;
-$colorSecundario: #908CB8;
-$colorOpciones: #D5CABD;
+@import "utilities/variables";
 
 * {
     padding: 0px;
@@ -139,21 +136,3 @@ footer {
 }
 
 
-/*MEDIA QUERIES*/
-
-@media (max-width:600px) {
-
-    nav ul li a {
-        margin-right: 5px;
-        padding: 5px;
-    }
-
-    footer .footer {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    footer ul {
-        position: relative;
-    }
