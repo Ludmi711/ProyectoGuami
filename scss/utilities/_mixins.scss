@@ -1,0 +1,28 @@
+@import "utilities/variables";
+
+@mixin display-align-flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin display-wrap-justify {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+@mixin decoration-bg-color {
+    text-decoration: none;
+    background-color: $colorOpciones;
+    color: black;
+}
+
+@mixin color-font-padding {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    font-size: 50px;
+}
+

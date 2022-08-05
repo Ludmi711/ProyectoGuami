@@ -1,5 +1,8 @@
 @import "utilities/variables";
+@import "utilities/mixins";
 
+
+//holi me parece que no se esta compilando
 * {
     padding: 0px;
     margin: 0px;
@@ -10,7 +13,7 @@ html {
     height: 100%;
 
     body {
-        background-color: #FAF8FF;
+        background-color: $colorPrincipal;
         font-family: 'Amatic SC', cursive;
         min-height: 100%;
 
@@ -31,16 +34,10 @@ header {
     padding: 30px;
 
     .logo {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
+        @include display-wrap-justify;
 
         .tituloLogo {
-            color: black;
-            font-weight: bold;
-            text-align: center;
-            padding: 10px;
-            font-size: 50px;
+            @include color-font-padding;
         }
     }
 
@@ -50,9 +47,7 @@ header {
         justify-content: center;
 
         .menu {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
+            @include display-align-flex;
 
             #opciones {
 
@@ -62,11 +57,9 @@ header {
                     margin-top: 60px;
 
                     a {
-                        text-decoration: none;
+                        @include decoration-bg-color;
                         margin-right: 50px;
                         border-radius: 20px;
-                        background-color: $colorOpciones;
-                        color: black;
                         padding: 20px;
                         font-size: 20px;
                     }
@@ -79,6 +72,7 @@ header {
             }
         }
     }
+
 
 
 }
@@ -95,13 +89,11 @@ main {
 
 footer {
     grid-area: footer;
-    display: flex;
-    margin-top: auto;
-    background-color: #908CB8;
-    border: solid;
-    margin-top: auto;
-    flex-direction: column;
-    position: relative;
+    margin-top: map-get($estilos, top);
+    background-color: map-get($estilos, color);
+    border: map-get($estilos, borde);
+    position: map-get($estilos, posicion);
+    @include display-align-flex;
 
     ul {
         position: absolute;
@@ -112,12 +104,9 @@ footer {
             display: inline-block;
 
             a {
-                color: black;
-                text-decoration: none;
+                @include decoration-bg-color;
                 margin-right: 50px;
                 border-radius: 30px;
-                background-color: #D5CABD;
-
             }
 
 
@@ -127,12 +116,6 @@ footer {
     }
 
     h2 {
-        color: black;
-        font-weight: bold;
-        text-align: center;
-        padding: 10px;
-        font-size: 50px;
+        @include color-font-padding;
     }
 }
-
-

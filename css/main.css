@@ -42,10 +42,10 @@ header {
         margin-top: 60px; }
         header nav .menu #opciones ul li a {
           text-decoration: none;
-          margin-right: 50px;
-          border-radius: 20px;
           background-color: #D5CABD;
           color: black;
+          margin-right: 50px;
+          border-radius: 20px;
           padding: 20px;
           font-size: 20px; }
         header nav .menu #opciones ul li a:hover {
@@ -58,13 +58,13 @@ main {
 
 footer {
   grid-area: footer;
-  display: flex;
   margin-top: auto;
   background-color: #908CB8;
   border: solid;
-  margin-top: auto;
-  flex-direction: column;
-  position: relative; }
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
   footer ul {
     position: absolute;
     top: 35%;
@@ -72,18 +72,14 @@ footer {
     footer ul li {
       display: inline-block; }
       footer ul li a {
-        color: black;
         text-decoration: none;
+        background-color: #D5CABD;
+        color: black;
         margin-right: 50px;
-        border-radius: 30px;
-        background-color: #D5CABD; }
+        border-radius: 30px; }
   footer h2 {
     color: black;
     font-weight: bold;
     text-align: center;
     padding: 10px;
     font-size: 50px; }
-
-@media (max-width: 576px) and (min-width: 280px) {
-  header {
-    background-color: red; } }
