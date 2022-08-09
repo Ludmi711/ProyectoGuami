@@ -1,0 +1,65 @@
+@media (max-width:600px) {
+
+    html .gridContainer {
+        display: grid;
+        grid-template-areas:
+            "header header header header"
+            "main main main main"
+            "section section section section"
+            "sectionTwo sectionTwo sectionTwo sectionTwo"
+            "footer footer footer footer";
+        grid-template-rows: 0.2fr 1.3fr 1.5fr 0.2fr;
+        grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+    }
+
+    main {
+        margin-left: 2px;
+    }
+
+    .mainPrincipal {
+        margin-left: 20px;
+
+        .carousel-item {
+            width: auto;
+        }
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+    .paginaPrincipal {
+        flex-direction: column;
+    }
+
+    .paginaPrincipal img {
+        margin-right: 0px;
+    }
+
+    nav ul li {
+        display: flex;
+        flex-direction: column;
+
+
+        a {
+            margin-right: 5px;
+
+        }
+    }
+
+    footer .footer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    footer ul {
+        position: relative;
+    }
+
+    .imagenesClases img {
+        width: 350px;
+        height: auto;
+    }
+}

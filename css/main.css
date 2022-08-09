@@ -1,145 +1,99 @@
 * {
   padding: 0px;
   margin: 0px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 html {
-  height: 100%;
-}
-
-html body {
-  background-color: #FAF8FF;
-  font-family: 'Amatic SC', cursive;
-  min-height: 100%;
-  display: grid;
-  grid-template-areas: "header header header "
-    "main main main "
-    "footer footer footer ";
-  grid-template-rows: 0.2fr 2fr 0.2fr;
-  grid-template-columns: 1fr 0.2fr 0.2fr;
-}
-
-html .gridContainer {
-  display: grid;
-  grid-template-areas: "header header header header"
-    "main main main main"
-    "section section section section"
-    "sectionTwo sectionTwo sectionTwo sectionTwo"
-    "footer footer footer footer";
-  grid-template-rows: 0.2fr 2fr 1.5fr 0.2fr;
-  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
-}
+  height: 100%; }
+  html body {
+    background-color: #FAF8FF;
+    font-family: 'Amatic SC', cursive;
+    min-height: 100%;
+    display: grid;
+    grid-template-areas: "header header header " "main main main " "footer footer footer ";
+    grid-template-rows: 0.2fr 2fr 0.2fr;
+    grid-template-columns: 1fr 0.2fr 0.2fr; }
+  html .gridContainer {
+    display: grid;
+    grid-template-areas: "header header header header" "main main main main" "section section section section" "sectionTwo sectionTwo sectionTwo sectionTwo" "footer footer footer footer";
+    grid-template-rows: 0.2fr 2fr 1.5fr 0.2fr;
+    grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr; }
 
 header {
   grid-area: header;
   background-color: #908CB8;
-  padding: 30px;
-}
+  padding: 30px; }
+  header .logo {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; }
+    header .logo img {
+      height: 70px; }
+    header .logo .tituloLogo {
+      color: black;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+      font-size: 50px; }
+  header nav {
+    grid-area: nav;
+    background-color: #908CB8;
+    justify-content: center; }
+    header nav .menu {
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+      header nav .menu #opciones ul li {
+        list-style: none;
+        float: right;
+        margin-top: 60px; }
+        header nav .menu #opciones ul li a {
+          text-decoration: none;
+          background-color: #D5CABD;
+          color: black;
+          margin-right: 50px;
+          border-radius: 20px;
+          padding: 20px;
+          font-size: 20px; }
+        header nav .menu #opciones ul li a:hover {
+          background-color: royalblue; }
 
-header .logo {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-
-header .logo img {
-  height: 70px;
-}
-
-header .logo .tituloLogo {
-  color: black;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
-  font-size: 50px;
-}
-
-header nav {
-  grid-area: nav;
-  background-color: #908CB8;
-  justify-content: center;
-}
-
-header nav .menu {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-header nav .menu #opciones ul li {
-  list-style: none;
-  float: right;
-  margin-top: 60px;
-}
-
-header nav .menu #opciones ul li a {
-  text-decoration: none;
-  background-color: #D5CABD;
-  color: black;
-  margin-right: 50px;
-  border-radius: 20px;
-  padding: 20px;
-  font-size: 20px;
-}
-
-header nav .menu #opciones ul li a:hover {
-  background-color: royalblue;
-}
+.mainPrincipal {
+  grid-area: main;
+  margin-left: 500px;
+  margin-top: 50px; }
+  .mainPrincipal .carouselIndex {
+    margin-left: 100px; }
 
 main {
   grid-area: main;
-  margin-left: 500px;
-  margin-top: 50px;
-}
-
-main .carouselIndex {
-  margin-left: 100px;
-}
-
-main .fotosClases {
-  margin-left: 2%;
-}
-
-main .imagenesClases {
-  align-items: inherit;
-}
-
-main .imagenesClases img {
-  height: 400px;
-}
-
-main .imagenesClases img:hover {
-  height: auto;
-}
+  margin-left: 40px; }
+  main .fotosClases {
+    margin-left: 2%; }
+  main .imagenesClases {
+    align-items: inherit; }
+    main .imagenesClases img {
+      height: 400px; }
+    main .imagenesClases img:hover {
+      height: auto; }
 
 main .formulario {
-  font-size: 30px;
-}
-
-main .formulario .formulario .textareaConsulta {
-  resize: none;
-}
+  font-size: 30px; }
+  main .formulario .textareaConsulta {
+    resize: none; }
 
 section {
-  grid-area: section;
-}
-
-section .sectionOne .sobreGuami {
-  font-size: 40px;
-  margin-left: 1.5%;
-}
-
-section .sectionOne img {
-  height: 500px;
-  margin-right: 200px;
-  margin-left: 2%;
-}
-
-section .sectionOne .paginaPrincipal {
-  display: flex;
-  font-size: 25px;
-}
+  grid-area: section; }
+  section .sectionOne .sobreGuami {
+    font-size: 40px;
+    margin-left: 1.5%; }
+  section .sectionOne img {
+    height: 500px;
+    margin-right: 200px;
+    margin-left: 2%; }
+  section .sectionOne .paginaPrincipal {
+    display: flex;
+    font-size: 25px; }
 
 footer {
   grid-area: footer;
@@ -149,31 +103,56 @@ footer {
   position: relative;
   display: flex;
   align-items: center;
-  flex-direction: column;
-}
+  flex-direction: column; }
+  footer ul {
+    position: absolute;
+    top: 35%;
+    left: 2%; }
+    footer ul li {
+      display: inline-block; }
+      footer ul li a {
+        text-decoration: none;
+        background-color: #D5CABD;
+        color: black;
+        margin-right: 50px;
+        border-radius: 30px; }
+  footer h2 {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    font-size: 50px; }
 
-footer ul {
-  position: absolute;
-  top: 35%;
-  left: 2%;
-}
-
-footer ul li {
-  display: inline-block;
-}
-
-footer ul li a {
-  text-decoration: none;
-  background-color: #D5CABD;
-  color: black;
-  margin-right: 50px;
-  border-radius: 30px;
-}
-
-footer h2 {
-  color: black;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
-  font-size: 50px;
-}
+@media (max-width: 600px) {
+  html .gridContainer {
+    display: grid;
+    grid-template-areas: "header header header header" "main main main main" "section section section section" "sectionTwo sectionTwo sectionTwo sectionTwo" "footer footer footer footer";
+    grid-template-rows: 0.2fr 1.3fr 1.5fr 0.2fr;
+    grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr; }
+  main {
+    margin-left: 2px; }
+  .mainPrincipal {
+    margin-left: 20px; }
+    .mainPrincipal .carousel-item {
+      width: auto; }
+    .mainPrincipal img {
+      width: 50%;
+      height: 50%; }
+  .paginaPrincipal {
+    flex-direction: column; }
+  .paginaPrincipal img {
+    margin-right: 0px; }
+  nav ul li {
+    display: flex;
+    flex-direction: column; }
+    nav ul li a {
+      margin-right: 5px; }
+  footer .footer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center; }
+  footer ul {
+    position: relative; }
+  .imagenesClases img {
+    width: 350px;
+    height: auto; } }

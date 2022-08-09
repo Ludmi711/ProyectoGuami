@@ -93,7 +93,7 @@ header {
 
 }
 
-main {
+.mainPrincipal {
     grid-area: main;
     margin-left: 500px;
     margin-top: 50px;
@@ -104,6 +104,9 @@ main {
 }
 
 main {
+    grid-area: main;
+    margin-left: 40px;
+
     .fotosClases {
         margin-left: 2%;
     }
@@ -127,7 +130,7 @@ main {
         font-size: 30px;
 
 
-        .formulario .textareaConsulta {
+        .textareaConsulta {
             resize: none;
         }
     }
