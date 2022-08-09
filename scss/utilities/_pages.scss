@@ -2,7 +2,7 @@
 @import "utilities/mixins";
 
 
-//holi me parece que no se esta compilando
+
 * {
     padding: 0px;
     margin: 0px;
@@ -26,6 +26,18 @@ html {
         grid-template-rows: 0.2fr 2fr 0.2fr;
         grid-template-columns: 1fr 0.2fr 0.2fr;
     }
+
+    .gridContainer {
+        display: grid;
+        grid-template-areas:
+            "header header header header"
+            "main main main main"
+            "section section section section"
+            "sectionTwo sectionTwo sectionTwo sectionTwo"
+            "footer footer footer footer";
+        grid-template-rows: 0.2fr 2fr 1.5fr 0.2fr;
+        grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+    }
 }
 
 header {
@@ -35,6 +47,10 @@ header {
 
     .logo {
         @include display-wrap-justify;
+
+        img {
+            height: 70px
+        }
 
         .tituloLogo {
             @include color-font-padding;
@@ -81,7 +97,73 @@ main {
     grid-area: main;
     margin-left: 500px;
     margin-top: 50px;
+
+    .carouselIndex {
+        margin-left: 100px;
+    }
 }
+
+main {
+    .fotosClases {
+        margin-left: 2%;
+    }
+
+    .imagenesClases {
+        align-items: inherit;
+
+        img {
+            height: 400px;
+        }
+
+        img:hover {
+            height: auto;
+        }
+
+    }
+}
+
+main {
+    .formulario {
+        font-size: 30px;
+
+
+        .formulario .textareaConsulta {
+            resize: none;
+        }
+    }
+
+}
+
+section {
+    grid-area: section;
+
+    .sectionOne {
+        .sobreGuami {
+            font-size: 40px;
+            margin-left: 1.5%;
+        }
+
+
+        img {
+            height: 500px;
+            margin-right: 200px;
+            margin-left: 2%;
+        }
+
+        .paginaPrincipal {
+            display: flex;
+            font-size: 25px;
+
+        }
+
+    }
+}
+
+
+
+
+
+
 
 
 
