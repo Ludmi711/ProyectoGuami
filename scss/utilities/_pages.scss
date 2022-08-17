@@ -123,6 +123,11 @@ main {
         }
 
     }
+
+    .diplomas {
+        margin-bottom: 10px;
+    }
+
 }
 
 main {
@@ -149,17 +154,20 @@ section {
 
         img {
             height: 500px;
-            margin-right: 200px;
+            margin-right: 100px;
             margin-left: 2%;
         }
-
-        .paginaPrincipal {
-            display: flex;
-            font-size: 25px;
-
-        }
-
     }
+}
+
+.paginaPrincipal {
+    display: flex;
+    font-size: 25px;
+
+    img {
+        margin-right: 20px;
+    }
+
 }
 
 

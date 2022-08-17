@@ -76,6 +76,8 @@ main {
       height: 400px; }
     main .imagenesClases img:hover {
       height: auto; }
+  main .diplomas {
+    margin-bottom: 10px; }
 
 main .formulario {
   font-size: 30px; }
@@ -89,11 +91,14 @@ section {
     margin-left: 1.5%; }
   section .sectionOne img {
     height: 500px;
-    margin-right: 200px;
+    margin-right: 100px;
     margin-left: 2%; }
-  section .sectionOne .paginaPrincipal {
-    display: flex;
-    font-size: 25px; }
+
+.paginaPrincipal {
+  display: flex;
+  font-size: 25px; }
+  .paginaPrincipal img {
+    margin-right: 20px; }
 
 footer {
   grid-area: footer;
