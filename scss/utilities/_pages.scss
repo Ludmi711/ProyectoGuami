@@ -2,6 +2,7 @@
 @import "utilities/mixins";
 
 
+/* body */
 
 * {
     padding: 0px;
@@ -35,10 +36,12 @@ html {
             "section section section section"
             "sectionTwo sectionTwo sectionTwo sectionTwo"
             "footer footer footer footer";
-        grid-template-rows: 0.2fr 2fr 1.5fr 0.2fr;
+        grid-template-rows: 0.2fr 0.5fr 0.5fr 0.2fr;
         grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
     }
 }
+
+/*header */
 
 header {
     grid-area: header;
@@ -54,7 +57,7 @@ header {
 
         .tituloLogo {
             @include color-font-padding;
-        }
+                    }
     }
 
     nav {
@@ -93,6 +96,9 @@ header {
 
 }
 
+/*main*/
+
+
 .mainPrincipal {
     grid-area: main;
     margin-left: 500px;
@@ -109,6 +115,7 @@ main {
 
     .fotosClases {
         margin-left: 2%;
+        font-size: 20px;
     }
 
     .imagenesClases {
@@ -142,6 +149,9 @@ main {
 
 }
 
+/*diferentes section*/
+
+
 section {
     grid-area: section;
 
@@ -154,31 +164,32 @@ section {
 
         img {
             height: 500px;
-            margin-right: 100px;
             margin-left: 2%;
         }
+    }
+}
+
+.sectionTwo {
+    grid-area: sectionTwo;
+    margin-top: 20px;
+
+    h2 {
+        margin-left: 1.5%;
     }
 }
 
 .paginaPrincipal {
     display: flex;
     font-size: 25px;
+    align-items: center;
+    justify-content: space-evenly;
 
-    img {
-        margin-right: 20px;
-    }
+
 
 }
 
 
-
-
-
-
-
-
-
-
+/*footer*/
 
 footer {
     grid-area: footer;
@@ -210,5 +221,6 @@ footer {
 
     h2 {
         @include color-font-padding;
+      
     }
 }

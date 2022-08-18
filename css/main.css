@@ -1,3 +1,4 @@
+/* body */
 * {
   padding: 0px;
   margin: 0px;
@@ -16,9 +17,10 @@ html {
   html .gridContainer {
     display: grid;
     grid-template-areas: "header header header header" "main main main main" "section section section section" "sectionTwo sectionTwo sectionTwo sectionTwo" "footer footer footer footer";
-    grid-template-rows: 0.2fr 2fr 1.5fr 0.2fr;
+    grid-template-rows: 0.2fr 0.5fr 0.5fr 0.2fr;
     grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr; }
 
+/*header */
 header {
   grid-area: header;
   background-color: #908CB8;
@@ -58,6 +60,7 @@ header {
         header nav .menu #opciones ul li a:hover {
           background-color: royalblue; }
 
+/*main*/
 .mainPrincipal {
   grid-area: main;
   margin-left: 500px;
@@ -69,7 +72,8 @@ main {
   grid-area: main;
   margin-left: 40px; }
   main .fotosClases {
-    margin-left: 2%; }
+    margin-left: 2%;
+    font-size: 20px; }
   main .imagenesClases {
     align-items: inherit; }
     main .imagenesClases img {
@@ -84,6 +88,7 @@ main .formulario {
   main .formulario .textareaConsulta {
     resize: none; }
 
+/*diferentes section*/
 section {
   grid-area: section; }
   section .sectionOne .sobreGuami {
@@ -91,15 +96,21 @@ section {
     margin-left: 1.5%; }
   section .sectionOne img {
     height: 500px;
-    margin-right: 100px;
     margin-left: 2%; }
+
+.sectionTwo {
+  grid-area: sectionTwo;
+  margin-top: 20px; }
+  .sectionTwo h2 {
+    margin-left: 1.5%; }
 
 .paginaPrincipal {
   display: flex;
-  font-size: 25px; }
-  .paginaPrincipal img {
-    margin-right: 20px; }
+  font-size: 25px;
+  align-items: center;
+  justify-content: space-evenly; }
 
+/*footer*/
 footer {
   grid-area: footer;
   margin-top: auto;
@@ -128,6 +139,7 @@ footer {
     padding: 10px;
     font-size: 50px; }
 
+/*medias queries*/
 @media (max-width: 600px) {
   html .gridContainer {
     display: grid;
