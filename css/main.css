@@ -9,7 +9,7 @@ html {
   html body {
     background-color: #FAF8FF;
     font-family: 'Amatic SC', cursive;
-    min-height: 100%;
+    height: 100%;
     display: grid;
     grid-template-areas: "header header header " "main main main " "footer footer footer ";
     grid-template-rows: 0.2fr 2fr 0.2fr;
@@ -24,7 +24,8 @@ html {
 header {
   grid-area: header;
   background-color: #908CB8;
-  padding: 30px; }
+  padding: 10px;
+  border: solid black; }
   header .logo {
     display: flex;
     flex-wrap: nowrap;
@@ -35,7 +36,6 @@ header {
       color: black;
       font-weight: bold;
       text-align: center;
-      padding: 10px;
       font-size: 50px; }
   header nav {
     grid-area: nav;
@@ -67,6 +67,9 @@ header {
   margin-top: 50px; }
   .mainPrincipal .carouselIndex {
     margin-left: 100px; }
+    .mainPrincipal .carouselIndex img {
+      min-width: 100%;
+      height: 32rem; }
 
 main {
   grid-area: main;
@@ -91,12 +94,15 @@ main .formulario {
 /*diferentes section*/
 section {
   grid-area: section; }
-  section .sectionOne .sobreGuami {
-    font-size: 40px;
-    margin-left: 1.5%; }
-  section .sectionOne img {
-    height: 500px;
-    margin-left: 2%; }
+  section .sectionOne {
+    background-color: antiquewhite;
+    margin-top: 10px; }
+    section .sectionOne .sobreGuami {
+      font-size: 40px;
+      margin-left: 1.5%; }
+    section .sectionOne img {
+      height: 500px;
+      margin-left: 2%; }
 
 .sectionTwo {
   grid-area: sectionTwo;
@@ -104,11 +110,14 @@ section {
   .sectionTwo h2 {
     margin-left: 1.5%; }
 
-.paginaPrincipal {
+.imagenTexto {
   display: flex;
   font-size: 25px;
   align-items: center;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  margin-bottom: 20px; }
+  .imagenTexto .presentacion {
+    margin-left: 20px; }
 
 /*footer*/
 footer {
@@ -136,7 +145,6 @@ footer {
     color: black;
     font-weight: bold;
     text-align: center;
-    padding: 10px;
     font-size: 50px; }
 
 /*medias queries*/

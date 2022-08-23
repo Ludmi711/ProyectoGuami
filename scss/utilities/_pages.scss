@@ -16,7 +16,7 @@ html {
     body {
         background-color: $colorPrincipal;
         font-family: 'Amatic SC', cursive;
-        min-height: 100%;
+        height: 100%;
 
 
         display: grid;
@@ -46,7 +46,8 @@ html {
 header {
     grid-area: header;
     background-color: $colorSecundario;
-    padding: 30px;
+    padding: 10px;
+    border: solid black;
 
     .logo {
         @include display-wrap-justify;
@@ -57,7 +58,7 @@ header {
 
         .tituloLogo {
             @include color-font-padding;
-                    }
+        }
     }
 
     nav {
@@ -106,6 +107,11 @@ header {
 
     .carouselIndex {
         margin-left: 100px;
+
+        img {
+            min-width: 100%;
+            height: 32rem;
+        }
     }
 }
 
@@ -156,6 +162,8 @@ section {
     grid-area: section;
 
     .sectionOne {
+        background-color: antiquewhite;
+        margin-top: 10px;
         .sobreGuami {
             font-size: 40px;
             margin-left: 1.5%;
@@ -178,12 +186,16 @@ section {
     }
 }
 
-.paginaPrincipal {
+.imagenTexto {
     display: flex;
     font-size: 25px;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 20px;
 
+    .presentacion {
+        margin-left: 20px;
+    }
 
 
 }
@@ -221,6 +233,6 @@ footer {
 
     h2 {
         @include color-font-padding;
-      
+
     }
 }
