@@ -14,40 +14,85 @@
         grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
     }
 
+    .logo {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+
+        .tituloLogo {
+            animation: none;
+        }
+    }
+
     main {
         margin-left: 2px;
     }
 
     .mainPrincipal {
-        margin-left: 20px;
+
 
         .carousel-item {
             width: auto;
         }
 
-        img {
-            width: 50%;
-            height: 50%;
-        }
+
     }
 
-    .paginaPrincipal {
+    .imagenTexto {
         flex-direction: column;
     }
 
-    .paginaPrincipal img {
+    .imagenTexto img {
         margin-right: 0px;
     }
 
     nav ul li {
         display: flex;
         flex-direction: column;
+        margin-top: 10px;
 
 
         a {
             margin-right: 5px;
 
         }
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+
+    .imagenesClases img {
+        width: 350px;
+        height: 400px;
+        margin-bottom: 5px;
+    }
+
+    .imagenesClases {
+        img:hover {
+            height: 400px !important;
+        }
+    }
+
+
+
+    .footerMedia {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    footer ul .list-unstyled {
+        position: relative;
+    }
+
+    footer ul {
+        top: 0;
+        left: 0;
     }
 
     footer .footer {
@@ -60,8 +105,9 @@
         position: relative;
     }
 
-    .imagenesClases img {
-        width: 350px;
-        height: auto;
-    }
+
+
+
+
+
 }

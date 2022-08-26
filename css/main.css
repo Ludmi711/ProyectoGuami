@@ -8,7 +8,9 @@ html {
   height: 100%; }
   html body {
     background-color: #FAF8FF;
-    font-family: 'Amatic SC', cursive;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     height: 100%;
     display: grid;
     grid-template-areas: "header header header " "main main main " "footer footer footer ";
@@ -48,7 +50,7 @@ header {
       header nav .menu #opciones ul li {
         list-style: none;
         float: right;
-        margin-top: 60px; }
+        margin-top: 50px; }
         header nav .menu #opciones ul li a {
           text-decoration: none;
           background-color: #D5CABD;
@@ -63,39 +65,47 @@ header {
 /*main*/
 .mainPrincipal {
   grid-area: main;
-  margin-left: 500px;
-  margin-top: 50px; }
-  .mainPrincipal .carouselIndex {
-    margin-left: 100px; }
-    .mainPrincipal .carouselIndex img {
-      min-width: 100%;
-      height: 32rem; }
+  margin-top: 20px; }
+  .mainPrincipal .container {
+    display: flex;
+    justify-content: center; }
+  .mainPrincipal img {
+    min-width: 100%;
+    height: 32rem; }
 
 main {
   grid-area: main;
-  margin-left: 40px; }
+  margin-left: 20px;
+  margin-top: 10px; }
   main .fotosClases {
     margin-left: 2%;
     font-size: 20px; }
   main .imagenesClases {
-    align-items: inherit; }
-    main .imagenesClases img {
-      height: 400px; }
-    main .imagenesClases img:hover {
-      height: auto; }
-  main .diplomas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin-bottom: 10px; }
+    main .imagenesClases img {
+      height: 400px;
+      margin-top: 10px;
+      margin-left: 10px; }
+    main .imagenesClases img:hover {
+      height: 600px; }
 
 main .formulario {
-  font-size: 30px; }
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
   main .formulario .textareaConsulta {
-    resize: none; }
+    resize: none;
+    width: 50rem;
+    height: 25rem; }
 
 /*diferentes section*/
 section {
   grid-area: section; }
   section .sectionOne {
-    background-color: antiquewhite;
     margin-top: 10px; }
     section .sectionOne .sobreGuami {
       font-size: 40px;
@@ -154,30 +164,49 @@ footer {
     grid-template-areas: "header header header header" "main main main main" "section section section section" "sectionTwo sectionTwo sectionTwo sectionTwo" "footer footer footer footer";
     grid-template-rows: 0.2fr 1.3fr 1.5fr 0.2fr;
     grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr; }
+  .logo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center; }
+    .logo .tituloLogo {
+      animation: none; }
   main {
     margin-left: 2px; }
-  .mainPrincipal {
-    margin-left: 20px; }
-    .mainPrincipal .carousel-item {
-      width: auto; }
-    .mainPrincipal img {
-      width: 50%;
-      height: 50%; }
-  .paginaPrincipal {
+  .mainPrincipal .carousel-item {
+    width: auto; }
+  .imagenTexto {
     flex-direction: column; }
-  .paginaPrincipal img {
+  .imagenTexto img {
     margin-right: 0px; }
   nav ul li {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: 10px; }
     nav ul li a {
       margin-right: 5px; }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px; }
+  .imagenesClases img {
+    width: 350px;
+    height: 400px;
+    margin-bottom: 5px; }
+  .imagenesClases img:hover {
+    height: 400px !important; }
+  .footerMedia {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center; }
+  footer ul .list-unstyled {
+    position: relative; }
+  footer ul {
+    top: 0;
+    left: 0; }
   footer .footer {
     display: flex;
     flex-direction: column-reverse;
     align-items: center; }
   footer ul {
-    position: relative; }
-  .imagenesClases img {
-    width: 350px;
-    height: auto; } }
+    position: relative; } }
