@@ -1,113 +1,160 @@
 /*medias queries*/
 
-@media (max-width:600px) {
+/* para vista mobile */
 
-    html .gridContainer {
-        display: grid;
-        grid-template-areas:
-            "header header header header"
-            "main main main main"
-            "section section section section"
-            "sectionTwo sectionTwo sectionTwo sectionTwo"
-            "footer footer footer footer";
-        grid-template-rows: 0.2fr 1.3fr 1.5fr 0.2fr;
-        grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
-    }
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+  /*BODY*/
+  html .gridContainer {
+    display: grid;
+    grid-template-areas:
+      "header header header header"
+      "main main main main"
+      "section section section section"
+      "sectionTwo sectionTwo sectionTwo sectionTwo"
+      "footer footer footer footer";
+    grid-template-rows: 0.2fr 1.3fr 1.5fr 0.2fr;
+    grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+  }
 
+  /*header*/
+
+  header {
+    min-width: 100%;
     .logo {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
 
-        .tituloLogo {
-            animation: none;
-        }
+      .tituloLogo {
+        animation: none;
+        font-size: 40px;
+      }
     }
+  }
 
-    main {
-        margin-left: 2px;
+  /*NAV*/
+
+  header .logo {
+    h1 {
+      font-size: 30px !important ;
     }
+  }
 
-    .mainPrincipal {
+  header nav ul li {
+    display: flex;
+    flex-direction: column;
 
-
-        .carousel-item {
-            width: auto;
-        }
-
-
+    a {
+      margin-right: 5px;
     }
+  }
 
-    .imagenTexto {
-        flex-direction: column;
+  header .nav-scroller {
+    margin-top: 0;
+  }
+
+  .collapse nav li {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  /*MAIN*/
+
+  main {
+    margin-left: 2px;
+  }
+
+  .imagenTexto {
+    flex-direction: column;
+
+    img {
+      margin-right: 0px;
+      width: 400px;
+      height: 450px;
     }
+  }
 
-    .imagenTexto img {
-        margin-right: 0px;
+  .mainPrincipal .carrusel img {
+    width: 400px;
+    height: 450px;
+    margin-bottom: 5px;
+  }
+
+  .imagenesClases img {
+    width: 350px;
+    height: 400px;
+    margin-bottom: 5px;
+  }
+
+  .imagenesClases {
+    img:hover {
+      height: 400px !important;
     }
+  }
 
-    nav ul li {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
+  /* FOOTER */
 
-
-        a {
-            margin-right: 5px;
-
-        }
+  footer {
+    min-width: 100%;
+    h2 {
+      font-size: 30px !important;
     }
+  }
 
-    .nav {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
+  footer .footer ul {
+    position: relative;
+    display: flex;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+}
+
+/* para vista table */
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+  .navItem {
+    margin-right: 5px !important;
+    border-radius: 15px !important;
+    padding: 5px !important;
+    font-size: 20px !important;
+  
+  a:hover {
+    background-color: royalblue;
+  }
+  }
+
+  header nav .menu #opciones ul li a {
+    margin-right: 5px;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .imagenTexto {
+    align-items: flex-start;
+
+    p {
+      font-size: 15px;
     }
+  }
 
-
-    .imagenesClases img {
-        width: 350px;
-        height: 400px;
-        margin-bottom: 5px;
+  .imagenesClases {
+    img:hover {
+      height: 400px !important;
     }
+  }
 
-    .imagenesClases {
-        img:hover {
-            height: 400px !important;
-        }
-    }
-
-
-
-    .footerMedia {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    footer ul .list-unstyled {
-        position: relative;
-    }
-
-    footer ul {
-        top: 0;
-        left: 0;
-    }
-
-    footer .footer {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    footer ul {
-        position: relative;
-    }
-
-
-
-
-
-
+  footer .footer ul {
+    position: relative;
+    display: flex;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0;
+  }
 }

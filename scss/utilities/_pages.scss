@@ -1,225 +1,221 @@
 @import "utilities/variables";
 @import "utilities/mixins";
 
-
 /* body */
 
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 html {
+  height: 100%;
+
+  body {
+    background-color: $colorPrincipal;
+    font-family: montserrat, sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
     height: 100%;
 
-    body {
-        background-color: $colorPrincipal;
-        font-family: montserrat, sans-serif;
+    display: grid;
+    grid-template-areas:
+      "header header header "
+      "main main main "
+      "footer footer footer ";
+    grid-template-rows: 0.2fr 2fr 0.2fr;
+    grid-template-columns: 1fr 0.2fr 0.2fr;
+  }
 
-
-        font-weight: 400;
-
-        font-style: normal;
-        height: 100%;
-
-
-        display: grid;
-        grid-template-areas:
-            "header header header "
-            "main main main "
-            "footer footer footer ";
-        grid-template-rows: 0.2fr 2fr 0.2fr;
-        grid-template-columns: 1fr 0.2fr 0.2fr;
-    }
-
-    .gridContainer {
-        display: grid;
-        grid-template-areas:
-            "header header header header"
-            "main main main main"
-            "section section section section"
-            "sectionTwo sectionTwo sectionTwo sectionTwo"
-            "footer footer footer footer";
-        grid-template-rows: 0.2fr 0.5fr 0.5fr 0.2fr;
-        grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
-    }
+  .gridContainer {
+    display: grid;
+    grid-template-areas:
+      "header header header header"
+      "main main main main"
+      "section section section section"
+      "sectionTwo sectionTwo sectionTwo sectionTwo"
+      "footer footer footer footer";
+    grid-template-rows: 0.2fr 0.5fr 0.5fr 0.2fr;
+    grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+  }
 }
 
 /*header */
 
 header {
-    grid-area: header;
-    background-color: $colorSecundario;
-    padding: 10px;
-    border: solid black;
+  grid-area: header;
+  background-color: $colorSecundario;
+  padding: 10px;
+  border: solid black;
 
-    .logo {
-        @include display-wrap-justify;
+  .logo {
+    @include display-wrap-justify;
+    align-items: center;
 
-        img {
-            height: 70px
-        }
-
-        .tituloLogo {
-            @include color-font-padding;
-        }
+    img {
+      height: 50px;
     }
 
-    nav {
-        grid-area: nav;
-        background-color: #908CB8;
-        justify-content: center;
-
-        .menu {
-            @include display-align-flex;
-
-            #opciones {
-
-                ul li {
-                    list-style: none;
-                    float: right;
-                    margin-top: 50px;
-
-                    a {
-                        @include decoration-bg-color;
-                        margin-right: 50px;
-                        border-radius: 20px;
-                        padding: 20px;
-                        font-size: 20px;
-                    }
-
-
-                    a:hover {
-                        background-color: royalblue;
-                    }
-                }
-            }
-        }
+    .tituloLogo {
+      @include color-font-padding;
     }
+  }
 
+  nav {
+    grid-area: nav;
+    background-color: #908cb8;
+    justify-content: center;
 
+    .menu {
+      @include display-align-flex;
 
+      #opciones {
+        ul li {
+          list-style: none;
+          float: right;
+          margin-top: 20px;
+          margin-bottom: 10px;
+
+          a {
+            @include decoration-bg-color;
+            margin-right: 50px;
+            border-radius: 20px;
+            padding: 20px;
+            font-size: 20px;
+          }
+
+          a:hover {
+            background-color: royalblue;
+          }
+        }
+      }
+    }
+  }
 }
+
+.navItem {
+  @include decoration-bg-color;
+  margin-right: 50px;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 20px;  }
+
+ ul li 
+  a:hover {
+    background-color: royalblue !important;
+  }
+  
 
 /*main*/
 
-
 .mainPrincipal {
-    grid-area: main;
-    margin-top: 20px;
+  grid-area: main;
+  margin-top: 20px;
 
-    .container {
-        display: flex;
-        justify-content: center;
-    }
+  .carrusel {
+    display: flex;
+    justify-content: center;
 
     img {
-        min-width: 100%;
-        height: 32rem;
+      width: 40rem;
+      height: 32rem;
     }
-
+  }
 }
 
 main {
-    grid-area: main;
-    margin-left: 20px;
-    margin-top: 10px;
+  grid-area: main;
+  margin-left: 20px;
+  margin-top: 10px;
 
-    .fotosClases {
-        margin-left: 2%;
-        font-size: 20px;
+  .fotosClases {
+    margin-left: 2%;
+    font-size: 20px;
+  }
+
+  .imagenesClases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+
+    img {
+      height: 400px;
+      margin-top: 10px;
+      margin-left: 10px;
     }
 
-    .imagenesClases {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin-bottom: 10px;
-
-        img {
-            height: 400px;
-            margin-top: 10px;
-            margin-left: 10px;
-        }
-
-        img:hover {
-            height: 600px;
-        }
-
+    img:hover {
+      height: 600px;
     }
-
-
-
+  }
 }
 
 main {
-    .formulario {
-        font-size: 30px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+  .formulario {
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
 
-
-        .textareaConsulta {
-            resize: none;
-            width: 50rem;
-            height: 25rem;
-        }
+    .textareaConsulta {
+      resize: none;
+      width: 30rem;
+      height: 25rem;
     }
-
+  }
 }
 
 /*diferentes section*/
 
-
 section {
-    grid-area: section;
+  grid-area: section;
 
-    .sectionOne {
-        margin-top: 10px;
+  .sectionOne {
+    margin-top: 10px;
 
-        .sobreGuami {
-            font-size: 40px;
-            margin-left: 1.5%;
-        }
-
-
-        img {
-            height: 500px;
-            margin-left: 2%;
-        }
+    .sobreGuami {
+      font-size: 20px;
+      margin-left: 1.5%;
     }
+
+    img {
+      height: 500px;
+      margin-left: 2%;
+    }
+  }
 }
 
 .sectionTwo {
-    grid-area: sectionTwo;
-    margin-top: 20px;
+  grid-area: sectionTwo;
+  margin-top: 20px;
 
-    h2 {
-        margin-left: 1.5%;
-    }
+  h2 {
+    margin-left: 1.5%;
+  }
 }
 
 .imagenTexto {
-    display: flex;
-    font-size: 25px;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
 
-    .presentacion {
-        margin-left: 20px;
-    }
-
-
+  .presentacion {
+    margin-left: 20px;
+  }
 }
-
 
 /*footer*/
 
 footer {
-    grid-area: footer;
+  grid-area: footer;
+  .footer {
     margin-top: map-get($estilos, top);
     background-color: map-get($estilos, color);
     border: map-get($estilos, borde);
@@ -227,27 +223,23 @@ footer {
     @include display-align-flex;
 
     ul {
-        position: absolute;
-        top: 35%;
-        left: 2%;
+      position: absolute;
+      top: 35%;
+      left: 2%;
 
-        li {
-            display: inline-block;
+      li {
+        display: inline-block;
 
-            a {
-                @include decoration-bg-color;
-                margin-right: 50px;
-                border-radius: 30px;
-            }
-
-
+        a {
+          @include decoration-bg-color;
+          margin-right: 50px;
+          border-radius: 30px;
         }
-
-
+      }
     }
 
     h2 {
-        @include color-font-padding;
-
+      @include color-font-padding;
     }
+  }
 }

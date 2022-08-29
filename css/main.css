@@ -1,3 +1,9 @@
+.p-20 {
+  padding: 20px; }
+
+.p-20 {
+  padding: 20px; }
+
 /* body */
 * {
   padding: 0px;
@@ -31,9 +37,10 @@ header {
   header .logo {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
     header .logo img {
-      height: 70px; }
+      height: 50px; }
     header .logo .tituloLogo {
       color: black;
       font-weight: bold;
@@ -41,7 +48,7 @@ header {
       font-size: 50px; }
   header nav {
     grid-area: nav;
-    background-color: #908CB8;
+    background-color: #908cb8;
     justify-content: center; }
     header nav .menu {
       display: flex;
@@ -50,7 +57,8 @@ header {
       header nav .menu #opciones ul li {
         list-style: none;
         float: right;
-        margin-top: 50px; }
+        margin-top: 20px;
+        margin-bottom: 10px; }
         header nav .menu #opciones ul li a {
           text-decoration: none;
           background-color: #D5CABD;
@@ -62,16 +70,29 @@ header {
         header nav .menu #opciones ul li a:hover {
           background-color: royalblue; }
 
+.navItem {
+  text-decoration: none;
+  background-color: #D5CABD;
+  color: black;
+  margin-right: 50px;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 20px; }
+
+ul li
+a:hover {
+  background-color: royalblue !important; }
+
 /*main*/
 .mainPrincipal {
   grid-area: main;
   margin-top: 20px; }
-  .mainPrincipal .container {
+  .mainPrincipal .carrusel {
     display: flex;
     justify-content: center; }
-  .mainPrincipal img {
-    min-width: 100%;
-    height: 32rem; }
+    .mainPrincipal .carrusel img {
+      width: 40rem;
+      height: 32rem; }
 
 main {
   grid-area: main;
@@ -96,10 +117,11 @@ main .formulario {
   font-size: 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  margin-bottom: 10px; }
   main .formulario .textareaConsulta {
     resize: none;
-    width: 50rem;
+    width: 30rem;
     height: 25rem; }
 
 /*diferentes section*/
@@ -108,7 +130,7 @@ section {
   section .sectionOne {
     margin-top: 10px; }
     section .sectionOne .sobreGuami {
-      font-size: 40px;
+      font-size: 20px;
       margin-left: 1.5%; }
     section .sectionOne img {
       height: 500px;
@@ -122,7 +144,7 @@ section {
 
 .imagenTexto {
   display: flex;
-  font-size: 25px;
+  font-size: 20px;
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: 20px; }
@@ -131,82 +153,131 @@ section {
 
 /*footer*/
 footer {
-  grid-area: footer;
-  margin-top: auto;
-  background-color: #908CB8;
-  border: solid;
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-direction: column; }
-  footer ul {
-    position: absolute;
-    top: 35%;
-    left: 2%; }
-    footer ul li {
-      display: inline-block; }
-      footer ul li a {
-        text-decoration: none;
-        background-color: #D5CABD;
-        color: black;
-        margin-right: 50px;
-        border-radius: 30px; }
-  footer h2 {
-    color: black;
-    font-weight: bold;
-    text-align: center;
-    font-size: 50px; }
+  grid-area: footer; }
+  footer .footer {
+    margin-top: auto;
+    background-color: #908CB8;
+    border: solid;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    footer .footer ul {
+      position: absolute;
+      top: 35%;
+      left: 2%; }
+      footer .footer ul li {
+        display: inline-block; }
+        footer .footer ul li a {
+          text-decoration: none;
+          background-color: #D5CABD;
+          color: black;
+          margin-right: 50px;
+          border-radius: 30px; }
+    footer .footer h2 {
+      color: black;
+      font-weight: bold;
+      text-align: center;
+      font-size: 50px; }
+
+.p-20 {
+  padding: 20px; }
+
+.p-20 {
+  padding: 20px; }
 
 /*medias queries*/
-@media (max-width: 600px) {
+/* para vista mobile */
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+  /*BODY*/
   html .gridContainer {
     display: grid;
     grid-template-areas: "header header header header" "main main main main" "section section section section" "sectionTwo sectionTwo sectionTwo sectionTwo" "footer footer footer footer";
     grid-template-rows: 0.2fr 1.3fr 1.5fr 0.2fr;
     grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr; }
-  .logo {
+  /*header*/
+  header {
+    min-width: 100%; }
+    header .logo {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center; }
+      header .logo .tituloLogo {
+        animation: none;
+        font-size: 40px; }
+  /*NAV*/
+  header .logo h1 {
+    font-size: 30px !important; }
+  header nav ul li {
     display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center; }
-    .logo .tituloLogo {
-      animation: none; }
+    flex-direction: column; }
+    header nav ul li a {
+      margin-right: 5px; }
+  header .nav-scroller {
+    margin-top: 0; }
+  .collapse nav li {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; }
+  /*MAIN*/
   main {
     margin-left: 2px; }
-  .mainPrincipal .carousel-item {
-    width: auto; }
   .imagenTexto {
     flex-direction: column; }
-  .imagenTexto img {
-    margin-right: 0px; }
-  nav ul li {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px; }
-    nav ul li a {
-      margin-right: 5px; }
-  .nav {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px; }
+    .imagenTexto img {
+      margin-right: 0px;
+      width: 400px;
+      height: 450px; }
+  .mainPrincipal .carrusel img {
+    width: 400px;
+    height: 450px;
+    margin-bottom: 5px; }
   .imagenesClases img {
     width: 350px;
     height: 400px;
     margin-bottom: 5px; }
   .imagenesClases img:hover {
     height: 400px !important; }
-  .footerMedia {
+  /* FOOTER */
+  footer {
+    min-width: 100%; }
+    footer h2 {
+      font-size: 30px !important; }
+  footer .footer ul {
+    position: relative;
     display: flex;
-    flex-direction: column-reverse;
-    align-items: center; }
-  footer ul .list-unstyled {
-    position: relative; }
-  footer ul {
     top: 0;
-    left: 0; }
-  footer .footer {
+    left: 0;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0; } }
+
+/* para vista table */
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+  .navItem {
+    margin-right: 5px !important;
+    border-radius: 15px !important;
+    padding: 5px !important;
+    font-size: 20px !important; }
+    .navItem a:hover {
+      background-color: royalblue; }
+  header nav .menu #opciones ul li a {
+    margin-right: 5px;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 20px; }
+  .imagenTexto {
+    align-items: flex-start; }
+    .imagenTexto p {
+      font-size: 15px; }
+  .imagenesClases img:hover {
+    height: 400px !important; }
+  footer .footer ul {
+    position: relative;
     display: flex;
-    flex-direction: column-reverse;
-    align-items: center; }
-  footer ul {
-    position: relative; } }
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0; } }
