@@ -1,1 +1,1 @@
-Guami es el primer proyecto de desarrollo web front end que realizo, busco plasmar lo aprendido durante el curso de desarrollo web de Coderhouse, desde conceptos básicos de html y css hasta sass y boostrap
+Guami es el primer proyecto de desarrollo front end que realizo, busco plasmar lo aprendido durante el curso de desarrollo web de Coderhouse, desde conceptos básicos de html y css hasta sass y boostrap
