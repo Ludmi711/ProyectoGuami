@@ -222,17 +222,17 @@ footer {
   main {
     margin-left: 2px; }
   .sectionOne .imagenTexto img {
-    width: 400px;
-    height: 450px; }
+    width: 350px;
+    height: 400px; }
   .imagenTexto {
     flex-direction: column; }
     .imagenTexto img {
       margin-right: 0px;
-      width: 400px;
-      height: 450px; }
+      width: 350px;
+      height: 400px; }
   .mainPrincipal .carrusel img {
-    width: 400px;
-    height: 450px;
+    width: 350px;
+    height: 400px;
     margin-bottom: 5px; }
   .imagenesClases img {
     width: 350px;
@@ -240,6 +240,12 @@ footer {
     margin-bottom: 5px; }
   .imagenesClases img:hover {
     height: 400px !important; }
+  .formulario form .checkbox input {
+    width: 2rem;
+    height: 2rem; }
+  .formulario form input {
+    width: 10rem;
+    height: 5rem; }
   .formulario form .textareaConsulta {
     width: 24rem;
     height: 15rem; }

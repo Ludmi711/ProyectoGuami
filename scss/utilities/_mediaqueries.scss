@@ -70,8 +70,8 @@
 
   .sectionOne .imagenTexto {
     img {
-      width: 400px;
-      height: 450px;
+      width: 350px;
+      height: 400px;
     }
   }
 
@@ -80,14 +80,14 @@
 
     img {
       margin-right: 0px;
-      width: 400px;
-      height: 450px;
+      width: 350px;
+      height: 400px;
     }
   }
 
   .mainPrincipal .carrusel img {
-    width: 400px;
-    height: 450px;
+    width: 350px;
+    height: 400px;
     margin-bottom: 5px;
   }
 
@@ -103,13 +103,26 @@
     }
   }
 
+  .formulario form .checkbox {
+    input {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
   .formulario form {
+    input {
+      width: 10rem;
+      height: 5rem;
+    }
 
     .textareaConsulta {
       width: 24rem;
       height: 15rem;
     }
   }
+
+
 
   /* FOOTER */
 
