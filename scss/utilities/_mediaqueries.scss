@@ -117,7 +117,7 @@
     }
 
     .textareaConsulta {
-      width: 24rem;
+      width: 20rem;
       height: 15rem;
     }
   }
@@ -179,6 +179,13 @@
 
     p {
       font-size: 15px;
+    }
+  }
+
+  .formulario form {
+    .textareaConsulta {
+      width: 25rem;
+      height: 15rem;
     }
   }
 
