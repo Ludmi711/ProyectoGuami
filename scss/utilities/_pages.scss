@@ -1,5 +1,5 @@
-@import "utilities/variables";
-@import "utilities/mixins";
+@import "variables";
+@import "mixins";
 
 /* body */
 
@@ -15,12 +15,9 @@ html {
   body {
     background-color: $colorPrincipal;
     font-family: montserrat, sans-serif;
-
     font-weight: 400;
-
     font-style: normal;
     height: 100%;
-
     display: grid;
     grid-template-areas:
       "header header header "
@@ -41,6 +38,11 @@ html {
     grid-template-rows: 0.2fr 0.5fr 0.5fr 0.2fr;
     grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
   }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
 }
 
 /*header */
@@ -51,16 +53,26 @@ header {
   padding: 10px;
   border: solid black;
 
-  .logo {
-    @include display-wrap-justify;
-    align-items: center;
+  a:hover {
+    color: black;
+  }
 
-    img {
-      height: 50px;
-    }
+  a {
+    text-decoration: none;
+    color: black;
 
-    .tituloLogo {
-      @include color-font-padding;
+    .logo {
+      @include display-wrap-justify;
+      align-items: center;
+
+
+      img {
+        height: 50px;
+      }
+
+      .tituloLogo {
+        @include color-font-padding;
+      }
     }
   }
 
@@ -101,15 +113,17 @@ header {
   margin-right: 50px;
   border-radius: 20px;
   padding: 20px;
-  font-size: 20px;  }
+  font-size: 20px;
+}
 
- ul li 
-  a:hover {
-    background-color: royalblue !important;
-  }
-  
+ul li a:hover {
+  background-color: royalblue !important;
+}
+
 
 /*main*/
+
+/*main index*/
 
 .mainPrincipal {
   grid-area: main;
@@ -126,10 +140,12 @@ header {
   }
 }
 
+/*main clases*/
+
 main {
   grid-area: main;
   margin-left: 20px;
-  margin-top: 10px;
+
 
   .fotosClases {
     margin-left: 2%;
@@ -154,6 +170,7 @@ main {
   }
 }
 
+/*main contacto */
 main {
   .formulario {
     font-size: 30px;
@@ -164,13 +181,15 @@ main {
 
     .textareaConsulta {
       resize: none;
-      width: 30rem;
+      width: 40rem;
       height: 25rem;
     }
   }
 }
 
 /*diferentes section*/
+
+/*secciones del index */
 
 section {
   grid-area: section;
@@ -179,7 +198,6 @@ section {
     margin-top: 10px;
 
     .sobreGuami {
-      font-size: 20px;
       margin-left: 1.5%;
     }
 
@@ -199,6 +217,8 @@ section {
   }
 }
 
+/*imagenes y texto */
+
 .imagenTexto {
   display: flex;
   font-size: 20px;
@@ -215,6 +235,7 @@ section {
 
 footer {
   grid-area: footer;
+
   .footer {
     margin-top: map-get($estilos, top);
     background-color: map-get($estilos, color);

@@ -1,9 +1,3 @@
-.p-20 {
-  padding: 20px; }
-
-.p-20 {
-  padding: 20px; }
-
 /* body */
 * {
   padding: 0px;
@@ -27,6 +21,9 @@ html {
     grid-template-areas: "header header header header" "main main main main" "section section section section" "sectionTwo sectionTwo sectionTwo sectionTwo" "footer footer footer footer";
     grid-template-rows: 0.2fr 0.5fr 0.5fr 0.2fr;
     grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr; }
+  html h2 {
+    font-size: 2rem;
+    font-weight: bold; }
 
 /*header */
 header {
@@ -34,18 +31,23 @@ header {
   background-color: #908CB8;
   padding: 10px;
   border: solid black; }
-  header .logo {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center; }
-    header .logo img {
-      height: 50px; }
-    header .logo .tituloLogo {
-      color: black;
-      font-weight: bold;
-      text-align: center;
-      font-size: 50px; }
+  header a:hover {
+    color: black; }
+  header a {
+    text-decoration: none;
+    color: black; }
+    header a .logo {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center; }
+      header a .logo img {
+        height: 50px; }
+      header a .logo .tituloLogo {
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        font-size: 50px; }
   header nav {
     grid-area: nav;
     background-color: #908cb8;
@@ -79,11 +81,11 @@ header {
   padding: 20px;
   font-size: 20px; }
 
-ul li
-a:hover {
+ul li a:hover {
   background-color: royalblue !important; }
 
 /*main*/
+/*main index*/
 .mainPrincipal {
   grid-area: main;
   margin-top: 20px; }
@@ -94,10 +96,10 @@ a:hover {
       width: 40rem;
       height: 32rem; }
 
+/*main clases*/
 main {
   grid-area: main;
-  margin-left: 20px;
-  margin-top: 10px; }
+  margin-left: 20px; }
   main .fotosClases {
     margin-left: 2%;
     font-size: 20px; }
@@ -113,6 +115,7 @@ main {
     main .imagenesClases img:hover {
       height: 600px; }
 
+/*main contacto */
 main .formulario {
   font-size: 30px;
   display: flex;
@@ -121,16 +124,16 @@ main .formulario {
   margin-bottom: 10px; }
   main .formulario .textareaConsulta {
     resize: none;
-    width: 30rem;
+    width: 40rem;
     height: 25rem; }
 
 /*diferentes section*/
+/*secciones del index */
 section {
   grid-area: section; }
   section .sectionOne {
     margin-top: 10px; }
     section .sectionOne .sobreGuami {
-      font-size: 20px;
       margin-left: 1.5%; }
     section .sectionOne img {
       height: 500px;
@@ -142,6 +145,7 @@ section {
   .sectionTwo h2 {
     margin-left: 1.5%; }
 
+/*imagenes y texto */
 .imagenTexto {
   display: flex;
   font-size: 20px;
@@ -180,12 +184,6 @@ footer {
       text-align: center;
       font-size: 50px; }
 
-.p-20 {
-  padding: 20px; }
-
-.p-20 {
-  padding: 20px; }
-
 /*medias queries*/
 /* para vista mobile */
 @media only screen and (min-width: 320px) and (max-width: 575px) {
@@ -223,6 +221,9 @@ footer {
   /*MAIN*/
   main {
     margin-left: 2px; }
+  .sectionOne .imagenTexto img {
+    width: 400px;
+    height: 450px; }
   .imagenTexto {
     flex-direction: column; }
     .imagenTexto img {
@@ -239,6 +240,9 @@ footer {
     margin-bottom: 5px; }
   .imagenesClases img:hover {
     height: 400px !important; }
+  .formulario form .textareaConsulta {
+    width: 24rem;
+    height: 15rem; }
   /* FOOTER */
   footer {
     min-width: 100%; }
@@ -268,7 +272,7 @@ footer {
     padding: 5px;
     font-size: 20px; }
   .imagenTexto {
-    align-items: flex-start; }
+    align-items: center; }
     .imagenTexto p {
       font-size: 15px; }
   .imagenesClases img:hover {

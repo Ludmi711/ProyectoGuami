@@ -3,6 +3,7 @@
 /* para vista mobile */
 
 @media only screen and (min-width: 320px) and (max-width: 575px) {
+
   /*BODY*/
   html .gridContainer {
     display: grid;
@@ -20,6 +21,7 @@
 
   header {
     min-width: 100%;
+
     .logo {
       display: flex;
       flex-wrap: nowrap;
@@ -37,7 +39,7 @@
 
   header .logo {
     h1 {
-      font-size: 30px !important ;
+      font-size: 30px !important;
     }
   }
 
@@ -64,6 +66,13 @@
 
   main {
     margin-left: 2px;
+  }
+
+  .sectionOne .imagenTexto {
+    img {
+      width: 400px;
+      height: 450px;
+    }
   }
 
   .imagenTexto {
@@ -94,10 +103,19 @@
     }
   }
 
+  .formulario form {
+
+    .textareaConsulta {
+      width: 24rem;
+      height: 15rem;
+    }
+  }
+
   /* FOOTER */
 
   footer {
     min-width: 100%;
+
     h2 {
       font-size: 30px !important;
     }
@@ -114,6 +132,15 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
 /* para vista table */
 @media only screen and (min-width: 576px) and (max-width: 991px) {
   .navItem {
@@ -121,10 +148,10 @@
     border-radius: 15px !important;
     padding: 5px !important;
     font-size: 20px !important;
-  
-  a:hover {
-    background-color: royalblue;
-  }
+
+    a:hover {
+      background-color: royalblue;
+    }
   }
 
   header nav .menu #opciones ul li a {
@@ -135,7 +162,7 @@
   }
 
   .imagenTexto {
-    align-items: flex-start;
+    align-items: center;
 
     p {
       font-size: 15px;
